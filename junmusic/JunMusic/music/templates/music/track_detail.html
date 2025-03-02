@@ -1,0 +1,49 @@
+<!-- music/templates/music/track_detail.html -->
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+<div class="navigation">
+    <a href="#" id="back-button" class="back-button">&lt;</a>
+    <a href="#" id="forward-button" class="forward-button">&gt;</a>
+</div>
+<h1>{{ track.title }}</h1>
+<p>Альбом: <a href="{% url 'album_detail' track.album.id %}">{{ track.album.title }}</a></p>
+<p>Артист: <a href="{% url 'artist_detail' track.album.artist.id %}">{{ track.album.artist.name }}</a></p>
+{% if track.audio_file %}
+    <audio controls>
+        <source src="{{ track.audio_file.url }}" type="audio/mpeg">
+        Ваш браузер не поддерживает аудио.
+    </audio>
+{% else %}
+    <p>Аудиофайл не загружен</p>
+{% endif %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const backButton = document.getElementById('back-button');
+    const forwardButton = document.getElementById('forward-button');
+
+    if (window.history.length > 1) {
+        backButton.classList.remove('disabled');
+        backButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.history.back();
+        });
+    } else {
+        backButton.classList.add('disabled');
+    }
+
+    forwardButton.classList.add('disabled');
+    window.addEventListener('popstate', function() {
+        if (window.history.length > 1) {
+            backButton.classList.remove('disabled');
+            forwardButton.classList.remove('disabled');
+        }
+    });
+
+    forwardButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.history.forward();
+    });
+});
+</script>

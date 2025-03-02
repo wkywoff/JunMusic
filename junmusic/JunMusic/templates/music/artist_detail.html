@@ -1,0 +1,9 @@
+<h1>{{ artist.name }}</h1>
+<p>{{ artist.bio }}</p>
+<img src="{{ artist.photo.url }}" alt="{{ artist.name }}" width="200">
+<h2>Альбомы</h2>
+<ul>
+{% for album in albums %}
+    <li><a href="{% url 'album_detail' album.id %}">{{ album.title }} ({{ album.year }})</a></li>
+{% endfor %}
+</ul>

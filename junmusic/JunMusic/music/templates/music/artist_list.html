@@ -1,0 +1,44 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+<div class="navigation">
+    <a href="#" id="back-button" class="back-button"><</a>
+    <a href="#" id="forward-button" class="forward-button">></a>
+</div>
+
+<h1>Артисты</h1>
+<ul>
+{% for artist in artists %}
+    <li><a href="{% url 'artist_detail' artist.id %}">{{ artist.name }}</a></li>
+{% endfor %}
+</ul>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const backButton = document.getElementById('back-button');
+    const forwardButton = document.getElementById('forward-button');
+
+    if (window.history.length > 1) {
+        backButton.classList.remove('disabled');
+        backButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.history.back();
+        });
+    } else {
+        backButton.classList.add('disabled');
+    }
+
+    forwardButton.classList.add('disabled');
+    window.addEventListener('popstate', function() {
+        if (window.history.length > 1) {
+            backButton.classList.remove('disabled');
+            forwardButton.classList.remove('disabled');
+        }
+    });
+
+    forwardButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.history.forward();
+    });
+});
+</script>

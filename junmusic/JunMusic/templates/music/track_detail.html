@@ -1,0 +1,7 @@
+<h1>{{ track.title }}</h1>
+<p>Альбом: <a href="{% url 'album_detail' track.album.id %}">{{ track.album.title }}</a></p>
+<p>Артист: <a href="{% url 'artist_detail' track.album.artist.id %}">{{ track.album.artist.name }}</a></p>
+<audio controls>
+    <source src="{{ track.audio_file.url }}" type="audio/mpeg">
+    Ваш браузер не поддерживает аудио.
+</audio>

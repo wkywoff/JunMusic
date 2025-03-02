@@ -1,0 +1,24 @@
+.navigation {
+    margin-bottom: 20px;
+}
+
+.back-button, .forward-button {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.back-button:hover, .forward-button:hover {
+    background-color: #0056b3;
+}
+
+.back-button.disabled, .forward-button.disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    pointer-events: none;
+}

@@ -1,0 +1,10 @@
+<h1>{{ album.title }}</h1>
+<p>Артист: <a href="{% url 'artist_detail' album.artist.id %}">{{ album.artist.name }}</a></p>
+<p>Год: {{ album.year }}</p>
+<img src="{{ album.cover.url }}" alt="{{ album.title }}" width="200">
+<h2>Треки</h2>
+<ul>
+{% for track in tracks %}
+    <li><a href="{% url 'track_detail' track.id %}">{{ track.title }}</a></li>
+{% endfor %}
+</ul>

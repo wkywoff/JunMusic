@@ -1,0 +1,40 @@
+{
+    "artists": [
+        {
+            "name": "aliceffrr",
+            "image": "img/aliceffrr.jpg",
+            "releases": [
+                {
+                    "title": "fml",
+                    "type": "Single",
+                    "releaseDate": "2025-01-01",
+                    "copyright": "© 2025 aliceffrr",
+                    "phonographicCopyright": "℗ 2025 aliceffrr",
+                    "tracks": [
+                        {
+                            "title": "fml",
+                            "length": "2:01",
+                            "explicit": false,
+                            "file": "audio/fml.mp3"
+                        }
+                    ]
+                },
+                {
+                    "title": "QUALIA",
+                    "type": "EP",
+                    "releaseDate": "2023-05-04",
+                    "copyright": "© 2023 aliceffrr",
+                    "phonographicCopyright": "℗ 2023 aliceffrr",
+                    "tracks": [
+                        {
+                            "title": "Track 1",
+                            "length": "3:45",
+                            "explicit": true,
+                            "file": "audio/qualia1.mp3"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

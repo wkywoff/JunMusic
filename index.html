@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Optional CSS -->
+</head>
+<body>
+  <h1>Discography</h1>
+  <div id="releases-grid" class="grid"></div>
+  <script src="main.js"></script>
+</body>
+</html>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="index.html">Home</a>
+        <a href="search.html">Search</a>
+        <a href="library.html">Library</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+        <h1>Welcome to My Music Site</h1>
+        <!-- Registration/Login Forms -->
+        <div id="auth">
+            <h2>Register</h2>
+            <form id="register-form">
+                <input type="text" id="reg-username" placeholder="Username" required>
+                <input type="email" id="reg-email" placeholder="Email" required>
+                <input type="password" id="reg-password" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="text" id="login-user" placeholder="Username/Email" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p id="auth-message"></p>
+        </div>
+        <!-- Dynamic content will be added via JS -->
+    </div>
+
+    <!-- Music Player -->
+    <div class="player">
+        <img id="player-art" src="" alt="Album Art">
+        <div class="player-info">
+            <span id="player-title"></span>
+            <span id="player-artist"></span>
+        </div>
+        <div class="player-controls">
+            <button id="prev">⏮</button>
+            <button id="play-pause">▶️</button>
+            <button id="next">⏭</button>
+        </div>
+        <div class="player-progress">
+            <span id="current-time">0:00</span>
+            <input type="range" id="seek-bar" min="0" value="0">
+            <span id="track-length">0:00</span>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/player.js"></script>
+</body>
+</html>

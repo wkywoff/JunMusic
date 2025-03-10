@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-content">
+  <div class="album-header">
+    <img src="/static/img/{{ album.cover }}" alt="Cover" class="album-page-cover">
+    <div class="album-details">
+      <div class="album-type">{{ album.type }}</div>
+      <h1 class="album-title">{{ album.title }}</h1>
+      <div class="album-artist">
+  {% if artist %}
+    <a href="/artist/{{ artist.id }}" class="artist-link">{{ artist.name }}</a>
+  {% else %}
+    Unknown Artist
+  {% endif %}
+      <div class="album-meta">
+        <p>Release date: {{ album.release_date }}</p>
+        <p>{{ album.type }}</p>
+        <p>{{ album.copyright }}</p>
+        <p>{{ album.phonographic_copyright }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tracklist">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+          <th>Duration</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for track in album.tracks %}
+        <tr>
+          <td>{{ loop.index }}</td>
+          <td>{{ track.title }}</td>
+          <td>{{ track.duration_str }}</td>
+          <td>
+            <button 
+              class="play-btn" 
+              onclick="playTrack('{{ track.id }}', '{{ album.cover|safe }}', '{{ track.title|safe }}', '{{ artist.name|safe }}', '{{ artist.id }}')">
+              ►
+            </button>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+<script>
+  // Передаём список треков текущего альбома в глобальную переменную для плеера
+  window.currentAlbumTracks = {{ album.tracks | tojson }};
+</script>
+{% endblock %}
+

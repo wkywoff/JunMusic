@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-content">
+  <h1>Search</h1>
+  <form action="/search" method="get" class="search-form">
+    <input type="text" name="q" placeholder="Search for albums, tracks, artists..." value="{{ query }}">
+    <button type="submit">Search</button>
+  </form>
+
+  {% if query %}
+    <h2>Results for "{{ query }}"</h2>
+
+    <h3>Artists</h3>
+    <ul>
+      {% for a in artists %}
+      <li>
+        <a href="/artist/{{ a.id }}">{{ a.name }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <h3>Albums</h3>
+    <div class="albums-grid">
+      {% for album in albums %}
+      <div class="album-card">
+        <a href="/album/{{ album.id }}">
+          <img src="/static/img/{{ album.cover }}" alt="Cover" class="album-cover">
+        </a>
+        <div class="album-info">
+          <a href="/album/{{ album.id }}" class="album-title">{{ album.title }}</a>
+          <div class="album-type">{{ album.type }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <h3>Tracks</h3>
+    <table class="tracklist-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Track</th>
+          <th>Album</th>
+          <th>Duration</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for item in tracks %}
+        <tr>
+          <td>{{ loop.index }}</td>
+          <td>{{ item.track.title }}</td>
+          <td><a href="/album/{{ item.album.id }}">{{ item.album.title }}</a></td>
+          <td>{{ item.track.duration_str }}</td>
+          <td>
+            <button 
+              class="play-btn" 
+              onclick="playTrack('{{ track.id }}', '{{ album.cover|safe }}', '{{ track.title|safe }}', '{{ artist.name|safe }}', '{{ artist.id }}')">
+              ►
+            </button>
+          </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>Enter a query to search.</p>
+  {% endif %}
+</div>
+{% endblock %}
+

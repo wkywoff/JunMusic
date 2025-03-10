@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="artist-banner">
+  <div class="artist-image-container">
+    <img src="/static/img/{{ artist.image }}" alt="{{ artist.name }}" class="artist-image">
+  </div>
+  <div class="artist-info-container">
+    <h2>{{ artist.name }}</h2>
+    <p>{{ artist.monthly_listeners|intcomma }} monthly listeners</p>
+    <p>{{ artist.bio }}</p>
+  </div>
+</div>
+
+<div class="page-content">
+  <!-- Popular tracks -->
+  <h2>Popular</h2>
+  <table class="tracklist-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th>Duration</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for track, album in popular_tracks %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ track.title }}</td>
+        <td>{{ track.duration_str }}</td>
+        <td>
+          <button 
+            class="play-btn" 
+            onclick="playTrack('{{ track.id }}', '{{ album.cover|safe }}', '{{ track.title|safe }}', '{{ artist.name|safe }}', '{{ artist.id }}')">
+            ►
+          </button>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <!-- Liked Songs -->
+  <h2>Liked Songs</h2>
+  <table class="tracklist-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th>Duration</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for track, album in liked_tracks %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ track.title }}</td>
+        <td>{{ track.duration_str }}</td>
+        <td>
+          <button
+            class="play-btn"
+            onclick="playTrack('{{ track.id }}', '{{ album.cover|safe }}', '{{ track.title|safe }}', '{{ artist.name|safe }}')">
+            ►
+          </button>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <!-- Discography -->
+  <h2>Discography</h2>
+  <div class="albums-grid">
+    {% for album in albums %}
+    <div class="album-card">
+      <a href="/album/{{ album.id }}">
+        <img src="/static/img/{{ album.cover }}" alt="Cover" class="album-cover">
+      </a>
+      <div class="album-info">
+        <a href="/album/{{ album.id }}" class="album-title">{{ album.title }}</a>
+        <div class="album-type">{{ album.type }}</div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
+

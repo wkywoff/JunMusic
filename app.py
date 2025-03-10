@@ -153,6 +153,24 @@ ALBUMS = [
                 "plays": 0
             }
         ]
+    },
+    {
+        "id": 7,
+        "title": "Гимн Рёспублікі Джун-Джун",
+        "artist_id": 2,
+        "type": "Single",
+        "release_date": "2024-11-24",
+        "cover": "cover7.png",
+        "copyright": "© 2024 Andre",
+        "phonographic_copyright": "℗ 2024 Andre",
+        "tracks": [
+            {
+                "id": 8,
+                "title": "Гимн Рёспублікі Джун-Джун",
+                "file_name": "track7.ogg",
+                "plays": 0
+            }
+        ]
     }
 ]
 

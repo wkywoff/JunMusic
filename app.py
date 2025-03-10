@@ -14,7 +14,7 @@ ARTISTS = [
         "id": 1,
         "name": "alicefrfr",
         "monthly_listeners": 0,
-        "image": "artist1.jpg",  # /static/img/artist1.jpg
+        "image": "artist1.png",  # /static/img/artist1.png
         "bio": "стип чо",
         "popular_tracks": [1],  # ID треков, которые считаются «популярными»
         "liked_songs": [],       # ID треков, которые «понравились» (пример)
@@ -23,10 +23,19 @@ ARTISTS = [
         "id": 2,
         "name": "ANDRIY",
         "monthly_listeners": 0,
-        "image": "artist2.jpg",  # /static/img/artist1.jpg
+        "image": "artist2.png",
         "bio": "THE GOD",
-        "popular_tracks": [2, 3],  # ID треков, которые считаются «популярными»
-        "liked_songs": [],       # ID треков, которые «понравились» (пример)
+        "popular_tracks": [2, 3],
+        "liked_songs": [],
+    },
+    {
+        "id": 3,
+        "name": "Артур Пирожков",
+        "monthly_listeners": 2 395 722,
+        "image": "artist3.png",
+        "bio": "",
+        "popular_tracks": [4, 5, 6, 7],
+        "liked_songs": [],
     }
 ]
 
@@ -69,6 +78,78 @@ ALBUMS = [
                 "id": 3,
                 "title": "THE GOD",
                 "file_name": "track2.mp3",
+                "plays": 0
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Зацепила",
+        "artist_id": 3,
+        "type": "Single",
+        "release_date": "2019-03-07",
+        "cover": "cover3.png",
+        "copyright": "© 2019 Warner Music Russia",
+        "phonographic_copyright": "℗ 2019 Warner Music Russia",
+        "tracks": [
+            {
+                "id": 4,
+                "title": "Зацепила",
+                "file_name": "track3.ogg",
+                "plays": 0
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Чика",
+        "artist_id": 3,
+        "type": "Single",
+        "release_date": "2018-05-11",
+        "cover": "cover4.png",
+        "copyright": "© 2018 Warner Music Russia",
+        "phonographic_copyright": "℗ 2018 Warner Music Russia",
+        "tracks": [
+            {
+                "id": 5,
+                "title": "Чика",
+                "file_name": "track4.ogg",
+                "plays": 0
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "#Алкоголичка",
+        "artist_id": 3,
+        "type": "Single",
+        "release_date": "2019-07-05",
+        "cover": "cover5.png",
+        "copyright": "© 2019 Warner Music Russia",
+        "phonographic_copyright": "℗ 2019 Warner Music Russia",
+        "tracks": [
+            {
+                "id": 6,
+                "title": "#Алкоголичка",
+                "file_name": "track5.ogg",
+                "plays": 0
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Она решила сдаться",
+        "artist_id": 3,
+        "type": "Single",
+        "release_date": "2020-02-14",
+        "cover": "cover5.png",
+        "copyright": "© 2020 Warner Music Russia",
+        "phonographic_copyright": "℗ 2020 Warner Music Russia",
+        "tracks": [
+            {
+                "id": 7,
+                "title": "Она решила сдаться",
+                "file_name": "track6.ogg",
                 "plays": 0
             }
         ]

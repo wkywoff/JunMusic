@@ -142,7 +142,7 @@ ALBUMS = [
         "artist_id": 3,
         "type": "Single",
         "release_date": "2020-02-14",
-        "cover": "cover5.png",
+        "cover": "cover6.png",
         "copyright": "© 2020 Warner Music Russia",
         "phonographic_copyright": "℗ 2020 Warner Music Russia",
         "tracks": [

@@ -31,7 +31,7 @@ ARTISTS = [
     {
         "id": 3,
         "name": "Артур Пирожков",
-        "monthly_listeners": 2 395 722,
+        "monthly_listeners": 2395722,
         "image": "artist3.png",
         "bio": "",
         "popular_tracks": [4, 5, 6, 7],

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-content">
+  <h1>Home</h1>
+  <div class="albums-grid">
+    {% for album in albums %}
+    <div class="album-card">
+      <a href="/album/{{ album.id }}">
+        <img src="/static/img/{{ album.cover }}" alt="Cover" class="album-cover">
+      </a>
+      <div class="album-info">
+        <a href="/album/{{ album.id }}" class="album-title">{{ album.title }}</a>
+<div class="album-artist">
+  {% set artist = get_artist_by_id(album.artist_id) %}
+  {% if artist %}
+    <a href="/artist/{{ artist.id }}" class="artist-link">{{ artist.name }}</a>
+  {% else %}
+    Unknown Artist
+  {% endif %}
+</div>
+        <div class="album-type">{{ album.type }}</div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
+

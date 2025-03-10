@@ -25,7 +25,7 @@ ARTISTS = [
         "monthly_listeners": 0,
         "image": "artist2.png",
         "bio": "THE GOD",
-        "popular_tracks": [2, 3],
+        "popular_tracks": [8, 2, 3],
         "liked_songs": [],
     },
     {
@@ -156,7 +156,7 @@ ALBUMS = [
     },
     {
         "id": 7,
-        "title": "Гимн Рёспублікі Джун-Джун",
+        "title": "Гімн Рёспублікі Джун-Джун",
         "artist_id": 2,
         "type": "Single",
         "release_date": "2024-11-24",
@@ -166,7 +166,7 @@ ALBUMS = [
         "tracks": [
             {
                 "id": 8,
-                "title": "Гимн Рёспублікі Джун-Джун",
+                "title": "Гімн Рёспублікі Джун-Джун",
                 "file_name": "track7.ogg",
                 "plays": 0
             }

@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="page-content">
+<div class="album-page-container">
+  <!-- Верхняя часть страницы альбома (баннер) -->
   <div class="album-banner">
     <img src="/static/img/{{ album.cover }}" alt="Cover" class="album-cover-large">
     <div class="album-info">
@@ -14,38 +15,38 @@
       </p>
     </div>
   </div>
-</div>
 
-<!-- Отдельный блок для треклиста, без ограничивающего контейнера -->
-<div class="album-tracklist">
-  <table>
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Title</th>
-        <th>Artist</th>
-        <th>Plays</th>
-        <th>Duration</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for track in album.tracks %}
-      <tr>
-        <td>{{ loop.index }}</td>
-        <td>{{ track.title }}</td>
-        <td>{{ artist.name }}</td>
-        <td>{{ track.plays }}</td>
-        <td>{{ track.duration_str }}</td>
-        <td>
-          <button class="play-btn"
-            onclick="playTrack('{{ track.id }}', '{{ album.cover|safe }}', '{{ track.title|safe }}', '{{ artist.name|safe }}', '{{ artist.id }}')">
-            ►
-          </button>
-        </td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+  <!-- Треклист альбома -->
+  <div class="album-tracklist">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+          <th>Artist</th>
+          <th>Plays</th>
+          <th>Duration</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for track in album.tracks %}
+        <tr>
+          <td>{{ loop.index }}</td>
+          <td>{{ track.title }}</td>
+          <td>{{ artist.name }}</td>
+          <td>{{ track.plays }}</td>
+          <td>{{ track.duration_str }}</td>
+          <td>
+            <button class="play-btn"
+              onclick="playTrack('{{ track.id }}', '{{ album.cover|safe }}', '{{ track.title|safe }}', '{{ artist.name|safe }}', '{{ artist.id }}')">
+              ►
+            </button>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 </div>
 {% endblock %}

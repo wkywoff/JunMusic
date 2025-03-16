@@ -259,6 +259,12 @@ body {
 /* ======================
    ALBUM PAGE (НОВЫЙ МАКЕТ)
    ====================== */
+.album-page-container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
 .album-banner {
   display: flex;
   align-items: flex-end;

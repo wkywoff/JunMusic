@@ -104,5 +104,10 @@ document.getElementById('prevBtn').addEventListener('click', () => {
   }
 });
 
+const volumeSlider = document.getElementById('volumeSlider');
+volumeSlider.addEventListener('input', (e) => {
+  audio.volume = e.target.value;
+});
+
 // Делаем функцию доступной глобально для вызовов из шаблонов
 window.playTrack = playTrack;

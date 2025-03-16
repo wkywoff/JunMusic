@@ -14,7 +14,7 @@ ARTISTS = [
         "id": 1,
         "name": "alicefrfr",
         "monthly_listeners": 0,
-        "image": "artist1.jpg",  # /static/img/artist1.jpg
+        "image": "artist1.png",  # /static/img/artist1.png
         "bio": "стип чо",
         "popular_tracks": [1],  # ID треков, которые считаются «популярными»
         "liked_songs": [],       # ID треков, которые «понравились» (пример)
@@ -22,11 +22,29 @@ ARTISTS = [
     {
         "id": 2,
         "name": "ANDRIY",
-        "monthly_listeners": 0,
-        "image": "artist2.jpg",  # /static/img/artist1.jpg
+        "monthly_listeners": "-1",
+        "image": "artist2.png",
         "bio": "THE GOD",
-        "popular_tracks": [2, 3],  # ID треков, которые считаются «популярными»
-        "liked_songs": [],       # ID треков, которые «понравились» (пример)
+        "popular_tracks": [8, 2, 3],
+        "liked_songs": [],
+    },
+    {
+        "id": 3,
+        "name": "Артур Пирожков",
+        "monthly_listeners": 2395722,
+        "image": "artist3.png",
+        "bio": "",
+        "popular_tracks": [4, 5, 6, 7],
+        "liked_songs": [],
+    },
+    {
+        "id": 4,
+        "name": "dmtboy",
+        "monthly_listeners": 1,
+        "image": "artist4.png",
+        "bio": "",
+        "popular_tracks": [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24],
+        "liked_songs": [],
     }
 ]
 
@@ -69,6 +87,204 @@ ALBUMS = [
                 "id": 3,
                 "title": "THE GOD",
                 "file_name": "track2.mp3",
+                "plays": 0
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Зацепила",
+        "artist_id": 3,
+        "type": "Single",
+        "release_date": "2019-03-07",
+        "cover": "cover3.png",
+        "copyright": "© 2019 Warner Music Russia",
+        "phonographic_copyright": "℗ 2019 Warner Music Russia",
+        "tracks": [
+            {
+                "id": 4,
+                "title": "Зацепила",
+                "file_name": "track3.ogg",
+                "plays": 0
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Чика",
+        "artist_id": 3,
+        "type": "Single",
+        "release_date": "2018-05-11",
+        "cover": "cover4.png",
+        "copyright": "© 2018 Warner Music Russia",
+        "phonographic_copyright": "℗ 2018 Warner Music Russia",
+        "tracks": [
+            {
+                "id": 5,
+                "title": "Чика",
+                "file_name": "track4.ogg",
+                "plays": 0
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "#Алкоголичка",
+        "artist_id": 3,
+        "type": "Single",
+        "release_date": "2019-07-05",
+        "cover": "cover5.png",
+        "copyright": "© 2019 Warner Music Russia",
+        "phonographic_copyright": "℗ 2019 Warner Music Russia",
+        "tracks": [
+            {
+                "id": 6,
+                "title": "#Алкоголичка",
+                "file_name": "track5.ogg",
+                "plays": 0
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Она решила сдаться",
+        "artist_id": 3,
+        "type": "Single",
+        "release_date": "2020-02-14",
+        "cover": "cover6.png",
+        "copyright": "© 2020 Warner Music Russia",
+        "phonographic_copyright": "℗ 2020 Warner Music Russia",
+        "tracks": [
+            {
+                "id": 7,
+                "title": "Она решила сдаться",
+                "file_name": "track6.ogg",
+                "plays": 0
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Гімн Рёспублікі Джун-Джун",
+        "artist_id": 2,
+        "type": "Single",
+        "release_date": "2024-11-24",
+        "cover": "cover7.png",
+        "copyright": "© 2024 Andre",
+        "phonographic_copyright": "℗ 2024 Andre",
+        "tracks": [
+            {
+                "id": 8,
+                "title": "Гімн Рёспублікі Джун-Джун",
+                "file_name": "track7.ogg",
+                "plays": 0
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "title": "SUCK IT!",
+        "artist_id": 4,
+        "type": "Album",
+        "release_date": "2025-03-14",
+        "cover": "cover8.png",
+        "copyright": "© 2025 dmtboy",
+        "phonographic_copyright": "℗ 2025 dmtboy",
+        "tracks": [
+            {
+                "id": 9,
+                "title": "VIP",
+                "file_name": "8.ogg",
+                "plays": 0
+            },
+            {
+                "id": 10,
+                "title": "FUCK YEAH",
+                "file_name": "9.ogg",
+                "plays": 0
+            },
+            {
+                "id": 11,
+                "title": "ЗАНЯЛ НИШУ",
+                "file_name": "10.ogg",
+                "plays": 0
+            },
+            {
+                "id": 12,
+                "title": "OMGDBL",
+                "file_name": "11.ogg",
+                "plays": 0
+            },
+            {
+                "id": 13,
+                "title": "XXXXL",
+                "file_name": "12.ogg",
+                "plays": 0
+            },
+            {
+                "id": 14,
+                "title": "TWERK",
+                "file_name": "13.ogg",
+                "plays": 0
+            },
+            {
+                "id": 15,
+                "title": "SKIT IT",
+                "file_name": "14.ogg",
+                "plays": 0
+            },
+            {
+                "id": 16,
+                "title": "ONLINE (w/ diklor, SHTRIHCOD & dekma)",
+                "file_name": "15.ogg",
+                "plays": 0
+            },
+            {
+                "id": 17,
+                "title": "БОЛЬШЕ ГЛАМУРА",
+                "file_name": "16.ogg",
+                "plays": 0
+            },
+            {
+                "id": 18,
+                "title": "ACORN",
+                "file_name": "17.ogg",
+                "plays": 0
+            },
+            {
+                "id": 19,
+                "title": "DG",
+                "file_name": "18.ogg",
+                "plays": 0
+            },
+            {
+                "id": 20,
+                "title": "MILF KLAB",
+                "file_name": "19.ogg",
+                "plays": 0
+            },
+            {
+                "id": 21,
+                "title": "SUCK MY SWAG",
+                "file_name": "20.ogg",
+                "plays": 0
+            },
+            {
+                "id": 22,
+                "title": "XXXXXXXXL (BONUS)",
+                "file_name": "21.ogg",
+                "plays": 0
+            },
+            {
+                "id": 23,
+                "title": "4E TAKOE SWAG (BONUS)",
+                "file_name": "22.ogg",
+                "plays": 0
+            },
+            {
+                "id": 24,
+                "title": "2007 (BONUS)",
+                "file_name": "23.ogg",
                 "plays": 0
             }
         ]
@@ -273,5 +489,6 @@ def intcomma_filter(value):
 # Запуск
 # ------------------------------
 if __name__ == "__main__":
-    app.run(debug=False)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=True)
 

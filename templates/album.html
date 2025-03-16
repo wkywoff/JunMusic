@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="page-content">
+<div class="album-page-container">
+  <!-- Верхняя часть страницы альбома (баннер) -->
   <div class="album-banner">
     <img src="/static/img/{{ album.cover }}" alt="Cover" class="album-cover-large">
     <div class="album-info">
@@ -15,6 +16,7 @@
     </div>
   </div>
 
+  <!-- Треклист альбома -->
   <div class="album-tracklist">
     <table>
       <thead>

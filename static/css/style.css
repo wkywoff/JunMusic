@@ -20,7 +20,7 @@ body {
   display: flex;
   flex-direction: row;
   height: 100vh;
-  overflow: hidden;
+  overflow: hidden; /* скрывает лишний скролл */
 }
 
 /* ======================
@@ -77,6 +77,8 @@ body {
 .page-content {
   max-width: 1000px;
   margin: 0 auto;
+  /* Добавляем отступ снизу, чтобы карточки не прятались за плеером */
+  padding-bottom: 120px;
 }
 
 /* ======================
@@ -94,6 +96,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
+  z-index: 999; /* плеер поверх остального контента */
 }
 
 .player-left {
@@ -113,17 +116,17 @@ body {
   flex-direction: column;
 }
 
+/* Если нет трека, ничего не отображаем (по умолчанию пусто) */
 .track-title {
   font-size: 14px;
   font-weight: 600;
 }
-
 .track-artist {
   font-size: 12px;
   color: #b3b3b3;
 }
 
-/* Горизонтальное расположение элементов в центре плеера */
+/* Горизонтальное расположение кнопок в центре плеера */
 .player-center {
   display: flex;
   align-items: center;
@@ -138,6 +141,11 @@ body {
   color: #1db954;
   padding: 5px 15px;
   cursor: pointer;
+  font-size: 14px;
+}
+
+.control-btn i {
+  font-size: 16px; /* размер иконок */
 }
 
 .control-btn:hover {
@@ -145,10 +153,9 @@ body {
   color: #fff;
 }
 
-/* Контейнер для прогресс-бара */
 .progress-container {
   background-color: #404040;
-  width: 250px; /* можно настроить по вкусу */
+  width: 250px;
   height: 5px;
   border-radius: 3px;
   cursor: pointer;
@@ -173,6 +180,23 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+/* Громкость */
+.volume-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.volume-icon {
+  color: #b3b3b3;
+  font-size: 16px;
+}
+
+#volumeSlider {
+  width: 80px;
+  cursor: pointer;
 }
 
 /* ======================
@@ -207,18 +231,27 @@ body {
   margin-top: 10px;
 }
 
-.album-title {
+/* Уменьшаем шрифт, чтобы не вылезал за карточку */
+.album-card .album-title {
+  font-size: 18px;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
   display: block;
+  margin-bottom: 5px;
 }
 
-.album-title:hover {
+.album-card .album-title:hover {
   text-decoration: underline;
 }
 
-.album-type {
+.album-card .album-artist {
+  font-size: 14px;
+  color: #b3b3b3;
+  margin-bottom: 3px;
+}
+
+.album-card .album-type {
   font-size: 12px;
   color: #666;
 }
@@ -226,11 +259,10 @@ body {
 /* ======================
    ALBUM PAGE (НОВЫЙ МАКЕТ)
    ====================== */
-/* Верхняя часть (обложка + инфо) */
 .album-banner {
   display: flex;
   align-items: flex-end;
-  background-color: #181818; /* Без градиента */
+  background-color: #181818;
   padding: 40px;
   margin-bottom: 20px;
 }
@@ -255,6 +287,7 @@ body {
   margin-bottom: 8px;
 }
 
+/* Название альбома на большой странице (может быть крупным) */
 .album-title {
   font-size: 48px;
   margin-bottom: 10px;
@@ -275,7 +308,6 @@ body {
   color: #b3b3b3;
 }
 
-/* Треклист под альбомом */
 .album-tracklist {
   padding: 0 40px 40px 40px;
 }
@@ -326,7 +358,7 @@ body {
   display: flex;
   align-items: flex-end;
   padding: 30px;
-  background-color: #181818; /* Убрали градиент */
+  background-color: #181818;
   margin-bottom: 20px;
 }
 

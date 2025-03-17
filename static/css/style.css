@@ -42,7 +42,7 @@ body {
 }
 
 .logo-text .highlight {
-  color: #1db954; /* Spotify Green */
+  color: #ffff99; /* Spotify Green */
 }
 
 .sidebar-menu {
@@ -136,9 +136,9 @@ body {
 
 .control-btn {
   background-color: transparent;
-  border: 1px solid #1db954;
+  border: 1px solid #ffff99;
   border-radius: 20px;
-  color: #1db954;
+  color: #ffff99;
   padding: 5px 15px;
   cursor: pointer;
   font-size: 14px;
@@ -149,7 +149,7 @@ body {
 }
 
 .control-btn:hover {
-  background-color: #1db954;
+  background-color: #ffff99;
   color: #fff;
 }
 
@@ -164,7 +164,7 @@ body {
 }
 
 .progress-bar {
-  background-color: #1db954;
+  background-color: #ffff99;
   height: 100%;
   width: 0%;
   border-radius: 3px;
@@ -345,8 +345,8 @@ body {
    КНОПКИ ВОСПРОИЗВЕДЕНИЯ
    ====================== */
 .play-btn {
-  background: #1db954;
-  color: #fff;
+  background: #ffff99;
+  color: #000000;
   border: none;
   border-radius: 3px;
   cursor: pointer;
@@ -354,7 +354,7 @@ body {
 }
 
 .play-btn:hover {
-  background: #1ed760;
+  background: #ffe699;
 }
 
 /* ======================
@@ -443,7 +443,7 @@ body {
 .search-form button {
   padding: 8px 16px;
   border: none;
-  background-color: #1db954;
+  background-color: #ffff99;
   color: #fff;
   cursor: pointer;
   border-radius: 0 4px 4px 0;

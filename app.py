@@ -63,7 +63,7 @@ ALBUMS = [
                 "id": 1,  # ID трека
                 "title": "x_ffff99",
                 "file_name": "track1.mp3",  # /static/audio/track1.mp3
-                "plays": 0  # Условное число прослушиваний
+                "plays": "<1000"  # Условное число прослушиваний
             }
         ]
     },
@@ -81,13 +81,13 @@ ALBUMS = [
                 "id": 2,
                 "title": "ANDRIY",
                 "file_name": "track2.mp3",
-                "plays": 0
+                "plays": "<1000"
             },
             {
                 "id": 3,
                 "title": "THE GOD",
                 "file_name": "track2.mp3",
-                "plays": 0
+                "plays": "<1000"
             }
         ]
     },
@@ -105,7 +105,7 @@ ALBUMS = [
                 "id": 4,
                 "title": "Зацепила",
                 "file_name": "track3.ogg",
-                "plays": 33109342
+                "plays": "33,109,342"
             }
         ]
     },
@@ -123,7 +123,7 @@ ALBUMS = [
                 "id": 5,
                 "title": "Чика",
                 "file_name": "track4.ogg",
-                "plays": 12246356
+                "plays": "12,246,356"
             }
         ]
     },
@@ -141,7 +141,7 @@ ALBUMS = [
                 "id": 6,
                 "title": "#Алкоголичка",
                 "file_name": "track5.ogg",
-                "plays": 12044341
+                "plays": "12,044,341"
             }
         ]
     },
@@ -159,7 +159,7 @@ ALBUMS = [
                 "id": 7,
                 "title": "Она решила сдаться",
                 "file_name": "track6.ogg",
-                "plays": 3729229
+                "plays": "3,729,229"
             }
         ]
     },
@@ -195,97 +195,97 @@ ALBUMS = [
                 "id": 9,
                 "title": "VIP",
                 "file_name": "8.ogg",
-                "plays": 0
+                "plays": "<1000"
             },
             {
                 "id": 10,
                 "title": "FUCK YEAH",
                 "file_name": "9.ogg",
-                "plays": 0
+                "plays": "<1000"
             },
             {
                 "id": 11,
                 "title": "ЗАНЯЛ НИШУ",
                 "file_name": "10.ogg",
-                "plays": 0
+                "plays": "<1000"
             },
             {
                 "id": 12,
                 "title": "OMGDBL",
                 "file_name": "11.ogg",
-                "plays": 0
+                "plays": "<1000"
             },
             {
                 "id": 13,
                 "title": "XXXXL",
                 "file_name": "12.ogg",
-                "plays": 0
+                "plays": "<1000"
             },
             {
                 "id": 14,
                 "title": "TWERK",
                 "file_name": "13.ogg",
-                "plays": 0
+                "plays": "<1000"
             },
             {
                 "id": 15,
                 "title": "SKIT IT",
                 "file_name": "14.ogg",
-                "plays": 0
+                "plays": "<1000"
             },
             {
                 "id": 16,
                 "title": "ONLINE (w/ diklor, SHTRIHCOD & dekma)",
                 "file_name": "15.ogg",
-                "plays": 0
+                "plays": "<1000"
             },
             {
                 "id": 17,
                 "title": "БОЛЬШЕ ГЛАМУРА",
                 "file_name": "16.ogg",
-                "plays": 0
+                "plays": "<1000"
             },
             {
                 "id": 18,
                 "title": "ACORN",
                 "file_name": "17.ogg",
-                "plays": 0
+                "plays": "<1000"
             },
             {
                 "id": 19,
                 "title": "DG",
                 "file_name": "18.ogg",
-                "plays": 0
+                "plays": "<1000"
             },
             {
                 "id": 20,
                 "title": "MILF KLAB",
                 "file_name": "19.ogg",
-                "plays": 0
+                "plays": "<1000"
             },
             {
                 "id": 21,
                 "title": "SUCK MY SWAG",
                 "file_name": "20.ogg",
-                "plays": 0
+                "plays": "<1000"
             },
             {
                 "id": 22,
                 "title": "XXXXXXXXL (BONUS)",
                 "file_name": "21.ogg",
-                "plays": 0
+                "plays": "<1000"
             },
             {
                 "id": 23,
                 "title": "4E TAKOE SWAG (BONUS)",
                 "file_name": "22.ogg",
-                "plays": 0
+                "plays": "<1000"
             },
             {
                 "id": 24,
                 "title": "2007 (BONUS)",
                 "file_name": "23.ogg",
-                "plays": 0
+                "plays": "<1000"
             }
         ]
     }

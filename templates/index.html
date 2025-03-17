@@ -1,88 +1,74 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <title>JunMusic</title>
-  <link rel="stylesheet" href="/static/css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  <script src="https://cdn.skypack.dev/@hotwired/turbo"></script>
+  <meta charset="UTF-8">
+  <title>JunMusic SPA</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <!-- Подключаем Font Awesome для иконок -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <div class="app-container">
     <!-- ЛЕВАЯ БОКОВАЯ ПАНЕЛЬ -->
     <nav class="sidebar">
       <div class="sidebar-logo">
-        <!-- Замените на свой логотип, если хотите -->
         <span class="logo-text">Jun<span class="highlight">Music</span></span>
       </div>
       <ul class="sidebar-menu">
-        <li class="menu-item active">Home</li>
-        <li class="menu-item">Search</li>
-        <li class="menu-item">Your Library</li>
+        <li class="menu-item"><a href="#" data-link="home">Home</a></li>
+        <li class="menu-item"><a href="#" data-link="search">Search</a></li>
+        <li class="menu-item"><a href="#" data-link="library">Your Library</a></li>
       </ul>
     </nav>
 
-    <!-- ЦЕНТРАЛЬНАЯ ЧАСТЬ С КОНТЕНТОМ -->
-    <div class="main-view">
-      <header class="header-bar">
-        <h2>Название трека</h2>
-        <p>Исполнитель</p>
-      </header>
+    <!-- ЦЕНТРАЛЬНАЯ ОБЛАСТЬ (ДИНАМИЧЕСКИЙ КОНТЕНТ) -->
+    <div class="main-view" id="content">
+      <!-- Здесь будет динамически подгружаться контент страниц -->
+    </div>
+  </div>
 
-      <div class="content">
-        <!-- Обложка альбома, описание и т.д. -->
-        <div class="cover-container">
-          <img src="/static/img/cover.jpg" alt="Cover" class="cover-img" />
-        </div>
-        <div class="track-details">
-          <h3>Описание</h3>
-          <p>Здесь можно вывести описание трека, альбома или любую другую информацию.</p>
-        </div>
+  <!-- НИЖНЯЯ ПАНЕЛЬ ПЛЕЕРА (Постоянная) -->
+  <div class="player-bar">
+    <div class="player-left">
+      <!-- По умолчанию скрытая обложка -->
+      <img src="/static/img/placeholder.png" alt="Cover" class="cover-thumbnail" id="player-cover" style="visibility:hidden;">
+      <div class="track-info">
+        <!-- Если трек не выбран, эти поля остаются пустыми -->
+        <div class="track-title" id="player-track-title"></div>
+        <div class="track-artist" id="player-track-artist"></div>
       </div>
     </div>
+    <div class="player-center">
+      <!-- Кнопки с иконками -->
+      <button id="prevBtn" class="control-btn">
+        <i class="fa-solid fa-backward-step"></i>
+      </button>
+      <button id="playPauseBtn" class="control-btn">
+        <i class="fa-solid fa-play"></i>
+      </button>
+      <button id="nextBtn" class="control-btn">
+        <i class="fa-solid fa-forward-step"></i>
+      </button>
+      <div class="progress-container">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+      <div class="time-info">
+        <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+      </div>
+    </div>
+    <div class="player-right">
+      <!-- Ползунок громкости -->
+      <div class="volume-container">
+        <i class="fa-solid fa-volume-high volume-icon"></i>
+        <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+      </div>
+    </div>
+  </div>
 
-<!-- НИЖНЯЯ ПАНЕЛЬ ПЛЕЕРА -->
-<div class="player-bar">
-  <div class="player-left">
-    <!-- Убираем "Выберите трек" по умолчанию -->
-    <img src="/static/img/placeholder.png" alt="Cover" class="cover-thumbnail" id="player-cover" style="visibility:hidden;">
-    <div class="track-info">
-      <!-- Пустые поля - заполняются при выборе трека -->
-      <div class="track-title" id="player-track-title"></div>
-      <div class="track-artist" id="player-track-artist"></div>
-    </div>
-  </div>
-  <div class="player-center">
-    <!-- Используем иконки Font Awesome -->
-    <button id="prevBtn" class="control-btn">
-      <i class="fa-solid fa-backward-step"></i>
-    </button>
-    <button id="playPauseBtn" class="control-btn">
-      <i class="fa-solid fa-play"></i>
-    </button>
-    <button id="nextBtn" class="control-btn">
-      <i class="fa-solid fa-forward-step"></i>
-    </button>
-    <div class="progress-container">
-      <div id="progressBar" class="progress-bar"></div>
-    </div>
-    <div class="time-info">
-      <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
-    </div>
-  </div>
-  <div class="player-right">
-    <!-- Блок громкости -->
-    <div class="volume-container">
-      <i class="fa-solid fa-volume-high volume-icon"></i>
-      <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
-    </div>
-  </div>
-</div>
-
-  <!-- Скрытый аудио элемент -->
+  <!-- Аудио элемент (не виден) -->
   <audio id="audioPlayer"></audio>
 
-  <!-- JS -->
-  <script src="/static/js/player.js"></script>
+  <!-- Скрипт SPA -->
+  <script src="/static/js/spa.js"></script>
 </body>
 </html>

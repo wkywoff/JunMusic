@@ -40,7 +40,7 @@ ARTISTS = [
     {
         "id": 4,
         "name": "dmtboy",
-        "monthly_listeners": 1,
+        "monthly_listeners": 10210,
         "image": "artist4.png",
         "bio": "",
         "popular_tracks": [9, 10, 11, 12, 13, 14, 16, 17, 18, 19],

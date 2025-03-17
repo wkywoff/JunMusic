@@ -43,7 +43,7 @@ ARTISTS = [
         "monthly_listeners": 1,
         "image": "artist4.png",
         "bio": "",
-        "popular_tracks": [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24],
+        "popular_tracks": [9, 10, 11, 12, 13, 14, 16, 17, 18, 19],
         "liked_songs": [],
     }
 ]
@@ -105,7 +105,7 @@ ALBUMS = [
                 "id": 4,
                 "title": "Зацепила",
                 "file_name": "track3.ogg",
-                "plays": 0
+                "plays": 33109342
             }
         ]
     },
@@ -123,7 +123,7 @@ ALBUMS = [
                 "id": 5,
                 "title": "Чика",
                 "file_name": "track4.ogg",
-                "plays": 0
+                "plays": 12246356
             }
         ]
     },
@@ -141,7 +141,7 @@ ALBUMS = [
                 "id": 6,
                 "title": "#Алкоголичка",
                 "file_name": "track5.ogg",
-                "plays": 0
+                "plays": 12044341
             }
         ]
     },
@@ -159,7 +159,7 @@ ALBUMS = [
                 "id": 7,
                 "title": "Она решила сдаться",
                 "file_name": "track6.ogg",
-                "plays": 0
+                "plays": 3729229
             }
         ]
     },
@@ -177,7 +177,7 @@ ALBUMS = [
                 "id": 8,
                 "title": "Гімн Рёспублікі Джун-Джун",
                 "file_name": "track7.ogg",
-                "plays": 0
+                "plays": "<1000"
             }
         ]
     },

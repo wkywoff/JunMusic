@@ -11,48 +11,48 @@ app = Flask(__name__)
 
 ARTISTS = [
     {
-        "id": 1,
+        "id": "qQCf81teSfXtNdUHAlliSw",
         "name": "alicefrfr",
         "monthly_listeners": 0,
         "image": "artist1.png",  # /static/img/artist1.png
         "bio": "стип чо",
-        "popular_tracks": [1],  # ID треков, которые считаются «популярными»
+        "popular_tracks": ["PrKqlF5nxb4plhpZgiCo9E"],  # ID треков, которые считаются «популярными»
         "liked_songs": [],       # ID треков, которые «понравились» (пример)
     },
     {
-        "id": 2,
+        "id": "0",
         "name": "ANDRIY",
         "monthly_listeners": "-1",
-        "image": "artist2.png",
+        "image": "cover2.jpg",
         "bio": "THE GOD",
-        "popular_tracks": [8, 2, 3],
+        "popular_tracks": [3, 1, 2],
         "liked_songs": [],
     },
     {
-        "id": 3,
+        "id": "tRDMNJMgOs4xHNLMq0pMJI",
         "name": "Артур Пирожков",
         "monthly_listeners": 2395722,
         "image": "artist3.png",
         "bio": "",
-        "popular_tracks": [4, 5, 6, 7],
+        "popular_tracks": ["BLURvxprovNrNTeNdh4C25", "pit8gduXrVenLmV0eQGEGt", "rMvHQxg9aafY4NblF7TbWG", "95rmO1qMxOKvu6cAg7rFtF"],
         "liked_songs": [],
     },
     {
-        "id": 4,
+        "id": "xzljOV9t0CR4KPG65egXRI",
         "name": "dmtboy",
         "monthly_listeners": 10210,
         "image": "artist4.png",
         "bio": "",
-        "popular_tracks": [9, 10, 11, 12, 13, 14, 16, 17, 18, 19],
+        "popular_tracks": ["M78OLOKupL7DymYWl231vi", "pjO2UUfVubw05qDq3q2dTM", "rembUmuyYNHGdumZwC9Bkt", "gxbklBaRLG6r0jwJLojP3Q", "9CIeTRvruZgbcHkccCJ280"],
         "liked_songs": [],
     }
 ]
 
 ALBUMS = [
     {
-        "id": 1,
+        "id": "OXPV5ENWdbz2zzErrLUWTH",
         "title": "x_ffff99",
-        "artist_id": 1,         # Ссылка на ARTISTS[0]
+        "artist_id": "qQCf81teSfXtNdUHAlliSw",         # Ссылка на ARTISTS[0]
         "type": "Single",       # Single, EP, Album
         "release_date": "2025-03-13",
         "cover": "cover1.jpg",  # /static/img/cover1.jpg
@@ -60,7 +60,7 @@ ALBUMS = [
         "phonographic_copyright": "℗ 2025 alicefrfr",
         "tracks": [
             {
-                "id": 1,  # ID трека
+                "id": "PrKqlF5nxb4plhpZgiCo9E",  # ID трека
                 "title": "x_ffff99",
                 "file_name": "track1.mp3",  # /static/audio/track1.mp3
                 "plays": "<1000"  # Условное число прослушиваний
@@ -68,9 +68,9 @@ ALBUMS = [
         ]
     },
     {
-        "id": 2,
+        "id": 1,
         "title": "THE GOD",
-        "artist_id": 2,
+        "artist_id": 0,
         "type": "EP",
         "release_date": "0000-01-01",
         "cover": "cover2.jpg",
@@ -78,13 +78,13 @@ ALBUMS = [
         "phonographic_copyright": "℗ 0000 ANDRIY",
         "tracks": [
             {
-                "id": 2,
+                "id": 1,
                 "title": "ANDRIY",
                 "file_name": "track2.mp3",
                 "plays": "<1000"
             },
             {
-                "id": 3,
+                "id": 2,
                 "title": "THE GOD",
                 "file_name": "track2.mp3",
                 "plays": "<1000"
@@ -92,9 +92,9 @@ ALBUMS = [
         ]
     },
     {
-        "id": 3,
+        "id": "dwSjU60M33KA6YbvIb2Tzi",
         "title": "Зацепила",
-        "artist_id": 3,
+        "artist_id": "tRDMNJMgOs4xHNLMq0pMJI",
         "type": "Single",
         "release_date": "2019-03-07",
         "cover": "cover3.png",
@@ -102,7 +102,7 @@ ALBUMS = [
         "phonographic_copyright": "℗ 2019 Warner Music Russia",
         "tracks": [
             {
-                "id": 4,
+                "id": "BLURvxprovNrNTeNdh4C25",
                 "title": "Зацепила",
                 "file_name": "track3.ogg",
                 "plays": "33,109,342"
@@ -110,9 +110,9 @@ ALBUMS = [
         ]
     },
     {
-        "id": 4,
+        "id": "jqRko59ujCu7lsuD8NXUqR",
         "title": "Чика",
-        "artist_id": 3,
+        "artist_id": "tRDMNJMgOs4xHNLMq0pMJI",
         "type": "Single",
         "release_date": "2018-05-11",
         "cover": "cover4.png",
@@ -120,7 +120,7 @@ ALBUMS = [
         "phonographic_copyright": "℗ 2018 Warner Music Russia",
         "tracks": [
             {
-                "id": 5,
+                "id": "pit8gduXrVenLmV0eQGEGt",
                 "title": "Чика",
                 "file_name": "track4.ogg",
                 "plays": "12,246,356"
@@ -128,9 +128,9 @@ ALBUMS = [
         ]
     },
     {
-        "id": 5,
+        "id": "XdEapSOwnAzTp9Qs898N75",
         "title": "#Алкоголичка",
-        "artist_id": 3,
+        "artist_id": "tRDMNJMgOs4xHNLMq0pMJI",
         "type": "Single",
         "release_date": "2019-07-05",
         "cover": "cover5.png",
@@ -138,7 +138,7 @@ ALBUMS = [
         "phonographic_copyright": "℗ 2019 Warner Music Russia",
         "tracks": [
             {
-                "id": 6,
+                "id": "rMvHQxg9aafY4NblF7TbWG",
                 "title": "#Алкоголичка",
                 "file_name": "track5.ogg",
                 "plays": "12,044,341"
@@ -146,9 +146,9 @@ ALBUMS = [
         ]
     },
     {
-        "id": 6,
+        "id": "mVlOcYztvejwJabqeRtGRC",
         "title": "Она решила сдаться",
-        "artist_id": 3,
+        "artist_id": "tRDMNJMgOs4xHNLMq0pMJI",
         "type": "Single",
         "release_date": "2020-02-14",
         "cover": "cover6.png",
@@ -156,7 +156,7 @@ ALBUMS = [
         "phonographic_copyright": "℗ 2020 Warner Music Russia",
         "tracks": [
             {
-                "id": 7,
+                "id": "95rmO1qMxOKvu6cAg7rFtF",
                 "title": "Она решила сдаться",
                 "file_name": "track6.ogg",
                 "plays": "3,729,229"
@@ -164,9 +164,9 @@ ALBUMS = [
         ]
     },
     {
-        "id": 7,
+        "id": 2,
         "title": "Гімн Рёспублікі Джун-Джун",
-        "artist_id": 2,
+        "artist_id": 0,
         "type": "Single",
         "release_date": "2024-11-24",
         "cover": "cover7.png",
@@ -174,7 +174,7 @@ ALBUMS = [
         "phonographic_copyright": "℗ 2024 Andre",
         "tracks": [
             {
-                "id": 8,
+                "id": 3,
                 "title": "Гімн Рёспублікі Джун-Джун",
                 "file_name": "track7.ogg",
                 "plays": "<1000"
@@ -182,9 +182,9 @@ ALBUMS = [
         ]
     },
     {
-        "id": 8,
+        "id": "msmyH7wKjhY7yiSLugth5Y",
         "title": "SUCK IT!",
-        "artist_id": 4,
+        "artist_id": "xzljOV9t0CR4KPG65egXRI",
         "type": "Album",
         "release_date": "2025-03-14",
         "cover": "cover8.png",
@@ -192,97 +192,97 @@ ALBUMS = [
         "phonographic_copyright": "℗ 2025 dmtboy",
         "tracks": [
             {
-                "id": 9,
+                "id": "pjO2UUfVubw05qDq3q2dTM",
                 "title": "VIP",
                 "file_name": "8.ogg",
                 "plays": "5,602"
             },
             {
-                "id": 10,
+                "id": "9CIeTRvruZgbcHkccCJ280",
                 "title": "FUCK YEAH",
                 "file_name": "9.ogg",
                 "plays": "3,995"
             },
             {
-                "id": 11,
+                "id": "kREZdsv96iY0dPG28RQdCb",
                 "title": "ЗАНЯЛ НИШУ",
                 "file_name": "10.ogg",
                 "plays": "3,791"
             },
             {
-                "id": 12,
+                "id": "rembUmuyYNHGdumZwC9Bkt",
                 "title": "OMGDBL",
                 "file_name": "11.ogg",
                 "plays": "4,732"
             },
             {
-                "id": 13,
+                "id": "URp4V35UTvm4bOTJYCIBW7",
                 "title": "XXXXL",
                 "file_name": "12.ogg",
                 "plays": "3,438"
             },
             {
-                "id": 14,
+                "id": "gxbklBaRLG6r0jwJLojP3Q",
                 "title": "TWERK",
                 "file_name": "13.ogg",
                 "plays": "4,277"
             },
             {
-                "id": 15,
+                "id": "VZ1rlyYeOSYjaA5RYuex6H",
                 "title": "SKIT IT",
                 "file_name": "14.ogg",
                 "plays": "2,989"
             },
             {
-                "id": 16,
+                "id": "M78OLOKupL7DymYWl231vi",
                 "title": "ONLINE (w/ diklor, SHTRIHCOD & dekma)",
                 "file_name": "15.ogg",
                 "plays": "7,300"
             },
             {
-                "id": 17,
+                "id": "HteD107qJibiwVwC3rh3Ta",
                 "title": "БОЛЬШЕ ГЛАМУРА",
                 "file_name": "16.ogg",
                 "plays": "3,665"
             },
             {
-                "id": 18,
+                "id": "GBox2jHR5DCoKMLeu61u81",
                 "title": "ACORN",
                 "file_name": "17.ogg",
                 "plays": "3,881"
             },
             {
-                "id": 19,
+                "id": "kwNmv8X7k1opQSULzAZIVD",
                 "title": "DG",
                 "file_name": "18.ogg",
                 "plays": "3,101"
             },
             {
-                "id": 20,
+                "id": "YWMK0E2O4Cz2RET1lBat3k",
                 "title": "MILF KLAB",
                 "file_name": "19.ogg",
                 "plays": "2,975"
             },
             {
-                "id": 21,
+                "id": "ALOCiObZl82dGTdbWDsU46",
                 "title": "SUCK MY SWAG",
                 "file_name": "20.ogg",
                 "plays": "2,615"
             },
             {
-                "id": 22,
+                "id": "3KVzJHJxn73V6w2lMBNEmD",
                 "title": "XXXXXXXXL (BONUS)",
                 "file_name": "21.ogg",
                 "plays": "2,730"
             },
             {
-                "id": 23,
+                "id": "6RFGUGxgItCt1mOTm0TeFt",
                 "title": "4E TAKOE SWAG (BONUS)",
                 "file_name": "22.ogg",
                 "plays": "3,281"
             },
             {
-                "id": 24,
+                "id": "InQ6F15oEzE6dzBW84B7QV",
                 "title": "2007 (BONUS)",
                 "file_name": "23.ogg",
                 "plays": "2,790"

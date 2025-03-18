@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 ARTISTS = [
     {
-        "id": "qQCf81teSfXtNdUHAlliSw",
+        "id": qQCf81teSfXtNdUHAlliSw,
         "name": "alicefrfr",
         "monthly_listeners": 0,
         "image": "artist1.png",  # /static/img/artist1.png

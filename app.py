@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 ARTISTS = [
     {
-        "id": qQCf81teSfXtNdUHAlliSw,
+        "id": "qQCf81teSfXtNdUHAlliSw",
         "name": "alicefrfr",
         "monthly_listeners": 0,
         "image": "artist1.png",  # /static/img/artist1.png
@@ -312,7 +312,7 @@ def format_duration(seconds: int) -> str:
     m, s = divmod(seconds, 60)
     return f"{m}:{s:02d}"
 
-def get_track_by_id(track_id: int):
+def get_track_by_id(track_id: str):
     """Возвращает словарь трека по его ID или None."""
     for album in ALBUMS:
         for t in album["tracks"]:
@@ -335,10 +335,10 @@ for album in ALBUMS:
 # 4) Вспомогательные функции
 # ------------------------------
 
-def get_artist_by_id(artist_id: int):
+def get_artist_by_id(artist_id: str):
     return next((a for a in ARTISTS if a["id"] == artist_id), None)
 
-def get_albums_by_artist(artist_id: int):
+def get_albums_by_artist(artist_id: str):
     return [a for a in ALBUMS if a["artist_id"] == artist_id]
 
 # ------------------------------
@@ -400,7 +400,7 @@ def library():
     """
     return render_template("library.html")
 
-@app.route("/album/<int:album_id>")
+@app.route("/album/<string:album_id>")
 def album_page(album_id):
     """
     Страница конкретного альбома с метаданными и треками.
@@ -411,7 +411,7 @@ def album_page(album_id):
     artist = get_artist_by_id(album["artist_id"])
     return render_template("album.html", album=album, artist=artist)
 
-@app.route("/artist/<int:artist_id>")
+@app.route("/artist/<string:artist_id>")
 def artist_page(artist_id):
     artist = get_artist_by_id(artist_id)
     if not artist:
@@ -442,7 +442,7 @@ def artist_page(artist_id):
         liked_tracks=liked_tracks
     )
 
-@app.route("/stream/<int:track_id>")
+@app.route("/stream/<string:track_id>")
 def stream(track_id):
     """
     Маршрут для потоковой передачи аудио (с поддержкой Range).

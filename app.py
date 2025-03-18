@@ -23,7 +23,7 @@ ARTISTS = [
         "id": 2,
         "name": "ANDRIY",
         "monthly_listeners": "-1",
-        "image": "artist2.png",
+        "image": "cover2.jpg",
         "bio": "THE GOD",
         "popular_tracks": [8, 2, 3],
         "liked_songs": [],
@@ -43,7 +43,7 @@ ARTISTS = [
         "monthly_listeners": 10210,
         "image": "artist4.png",
         "bio": "",
-        "popular_tracks": [9, 10, 11, 12, 13, 14, 16, 17, 18, 19],
+        "popular_tracks": [16, 9, 12, 14, 10],
         "liked_songs": [],
     }
 ]

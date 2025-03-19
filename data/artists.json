@@ -3,13 +3,13 @@
         "id": "qQCf81teSfXtNdUHAlliSw",
         "name": "alicefrfr",
         "monthly_listeners": 0,
-        "image": "artist1.png",  # /static/img/artist1.png
+        "image": "artist1.png",
         "bio": "стип чо",
-        "popular_tracks": ["PrKqlF5nxb4plhpZgiCo9E"],  # ID треков, которые считаются «популярными»
-        "liked_songs": [],       # ID треков, которые «понравились» (пример)
+        "popular_tracks": ["PrKqlF5nxb4plhpZgiCo9E"],
+        "liked_songs": [],
     },
     {
-        "id": "0",
+        "id": "q6ocAToad8ifLk46EaDnU9",
         "name": "ANDRIY",
         "monthly_listeners": "-1",
         "image": "cover2.jpg",

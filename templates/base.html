@@ -5,31 +5,22 @@
   <title>JunMusic</title>
   <link rel="stylesheet" href="/static/css/style.css" />
   <!-- Font Awesome для иконок -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
-  <!-- Боковая панель (Desktop) -->
+  <!-- Desktop: Боковая панель -->
   <nav class="sidebar">
     <div class="sidebar-logo">
       <span class="logo-text">Jun<span class="highlight">Music</span></span>
     </div>
     <ul class="sidebar-menu">
-      <li class="menu-item">
-        <a href="/home">Home</a>
-      </li>
-      <li class="menu-item">
-        <a href="/search">Search</a>
-      </li>
-      <li class="menu-item">
-        <a href="/library">Your Library</a>
-      </li>
+      <li class="menu-item"><a href="/home">Home</a></li>
+      <li class="menu-item"><a href="/search">Search</a></li>
+      <li class="menu-item"><a href="/library">Your Library</a></li>
     </ul>
   </nav>
 
-  <!-- Мини-плеер (Mobile) — скрыт на десктопе, виден на мобильных -->
+  <!-- Mobile: Мини-плеер (верхняя панель) -->
   <div class="mini-player" id="miniPlayer">
     <div class="mini-player-cover">
       <img src="/static/img/placeholder.png" alt="Cover" id="miniCover" />
@@ -51,7 +42,7 @@
     {% endblock %}
   </div>
 
-  <!-- Плеер (Desktop) -->
+  <!-- Desktop: Плеер (фиксированный внизу) -->
   <div class="player-bar">
     <div class="player-left">
       <img src="/static/img/placeholder.png" alt="Cover" class="cover-thumbnail" id="desktop-cover" style="visibility:hidden;">
@@ -85,7 +76,7 @@
     </div>
   </div>
 
-  <!-- Нижняя панель навигации (Mobile) -->
+  <!-- Mobile: Нижняя панель навигации -->
   <div class="bottom-nav">
     <button class="nav-btn" onclick="location.href='/home'">
       <i class="fa-solid fa-house"></i>
@@ -101,7 +92,7 @@
     </button>
   </div>
 
-  <!-- Полноэкранный плеер (Mobile) -->
+  <!-- Mobile: Полноэкранный плеер -->
   <div class="fullscreen-player" id="fullscreenPlayer">
     <div class="player-top">
       <img src="/static/img/placeholder.png" alt="Cover" id="fullCover" />
@@ -122,12 +113,11 @@
         <button id="full-playPauseBtn"><i class="fa-solid fa-play"></i></button>
         <button id="full-nextBtn"><i class="fa-solid fa-forward-step"></i></button>
       </div>
-      <!-- Кнопка закрыть полноэкранный плеер -->
       <button id="closeFullscreen"><i class="fa-solid fa-down-left-and-up-right-to-center"></i></button>
     </div>
   </div>
 
-  <!-- Аудиоэлемент (единый) -->
+  <!-- Единый аудиоэлемент -->
   <audio id="audioPlayer"></audio>
 
   <!-- JS -->

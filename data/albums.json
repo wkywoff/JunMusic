@@ -2,25 +2,25 @@
     {
         "id": "OXPV5ENWdbz2zzErrLUWTH",
         "title": "x_ffff99",
-        "artist_id": "qQCf81teSfXtNdUHAlliSw",         # Ссылка на ARTISTS[0]
-        "type": "Single",       # Single, EP, Album
+        "artist_id": "qQCf81teSfXtNdUHAlliSw",
+        "type": "Single",
         "release_date": "2025-03-13",
-        "cover": "cover1.jpg",  # /static/img/cover1.jpg
+        "cover": "cover1.jpg",
         "copyright": "© 2025 alicefrfr",
         "phonographic_copyright": "℗ 2025 alicefrfr",
         "tracks": [
             {
-                "id": "PrKqlF5nxb4plhpZgiCo9E",  # ID трека
+                "id": "PrKqlF5nxb4plhpZgiCo9E",
                 "title": "x_ffff99",
-                "file_name": "track1.mp3",  # /static/audio/track1.mp3
-                "plays": "<1000"  # Условное число прослушиваний
+                "file_name": "track1.mp3",
+                "plays": "<1000"
             }
         ]
     },
     {
-        "id": 1,
+        "id": "JLKn1WoOpn4D5PkE0NxLja",
         "title": "THE GOD",
-        "artist_id": 0,
+        "artist_id": "q6ocAToad8ifLk46EaDnU9",
         "type": "EP",
         "release_date": "0000-01-01",
         "cover": "cover2.jpg",
@@ -28,13 +28,13 @@
         "phonographic_copyright": "℗ 0000 ANDRIY",
         "tracks": [
             {
-                "id": 1,
+                "id": "99u89Aps4rChWuzE2eF5wN",
                 "title": "ANDRIY",
                 "file_name": "track2.mp3",
                 "plays": "<1000"
             },
             {
-                "id": 2,
+                "id": "wPkTqLfS3O0h9BiRXYCGTi",
                 "title": "THE GOD",
                 "file_name": "track2.mp3",
                 "plays": "<1000"
@@ -114,9 +114,9 @@
         ]
     },
     {
-        "id": 2,
+        "id": "24TgyTpZFFhidY1UnQtpod",
         "title": "Гімн Рёспублікі Джун-Джун",
-        "artist_id": 0,
+        "artist_id": "q6ocAToad8ifLk46EaDnU9",
         "type": "Single",
         "release_date": "2024-11-24",
         "cover": "cover7.png",
@@ -124,7 +124,7 @@
         "phonographic_copyright": "℗ 2024 Andre",
         "tracks": [
             {
-                "id": 3,
+                "id": "jZ3tQpqpPROEuMMX5S3wKh",
                 "title": "Гімн Рёспублікі Джун-Джун",
                 "file_name": "track7.ogg",
                 "plays": "<1000"

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>JunMusic</title>
+  <link rel="stylesheet" href="/static/css/mobile.css">
+  <!-- Font Awesome для иконок -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+</head>
+<body>
+  <!-- Мини-плеер (top bar) -->
+  <div class="mini-player" id="miniPlayer">
+    <div class="mini-player-cover">
+      <img src="/static/img/placeholder.png" alt="Cover" id="miniCover" />
+    </div>
+    <div class="mini-player-info">
+      <div class="mini-player-track" id="miniTrackTitle">No track</div>
+      <div class="mini-player-artist" id="miniTrackArtist">---</div>
+    </div>
+    <div class="mini-player-controls">
+      <button id="miniPausePlayBtn">
+        <i class="fa-solid fa-pause"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Основная часть контента (Home, Search, etc.) -->
+  <div class="content">
+    <h1>Welcome to JunMusic Mobile!</h1>
+    <p>Основной контент страницы</p>
+  </div>
+
+  <!-- Нижняя панель навигации -->
+  <div class="bottom-nav">
+    <button class="nav-btn" data-page="home">
+      <i class="fa-solid fa-house"></i>
+      <span>Home</span>
+    </button>
+    <button class="nav-btn" data-page="search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <span>Search</span>
+    </button>
+    <button class="nav-btn" data-page="library">
+      <i class="fa-solid fa-book"></i>
+      <span>Your Library</span>
+    </button>
+  </div>
+
+  <!-- Полноэкранный плеер (по умолчанию скрыт) -->
+  <div class="fullscreen-player" id="fullscreenPlayer">
+    <div class="player-top">
+      <!-- Обложка -->
+      <img src="/static/img/placeholder.png" alt="Cover" id="fullCover" />
+    </div>
+    <div class="player-middle">
+      <h2 id="fullTrackTitle">No track</h2>
+      <p id="fullTrackArtist">---</p>
+    </div>
+    <div class="player-bottom">
+      <div class="progress-container">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+      <div class="time-info">
+        <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+      </div>
+      <div class="controls">
+        <button id="prevBtn"><i class="fa-solid fa-backward-step"></i></button>
+        <button id="playPauseBtn"><i class="fa-solid fa-play"></i></button>
+        <button id="nextBtn"><i class="fa-solid fa-forward-step"></i></button>
+      </div>
+      <!-- Закрыть fullscreen -->
+      <button id="closeFullscreen"><i class="fa-solid fa-down-left-and-up-right-to-center"></i></button>
+    </div>
+  </div>
+
+  <!-- Аудиоэлемент -->
+  <audio id="audioPlayer"></audio>
+
+  <!-- JS -->
+  <script src="/static/js/mobile.js"></script>
+</body>
+</html>

@@ -47,15 +47,15 @@
       </thead>
       <tbody>
       {% for item in tracks %}
+        {% set track = item.track %}
+        {% set album = item.album %}
         <tr>
           <td>{{ loop.index }}</td>
-          <td>{{ item.track.title }}</td>
-          <td><a href="/album/{{ item.album.id }}">{{ item.album.title }}</a></td>
-          <td>{{ item.track.duration_str }}</td>
+          <td>{{ track.title }}</td>
+          <td><a href="/album/{{ album.id }}">{{ album.title }}</a></td>
+          <td>{{ track.duration_str }}</td>
           <td>
-            <button 
-              class="play-btn" 
-              onclick="playTrack('{{ track.id }}', '{{ album.cover|safe }}', '{{ track.title|safe }}', '{{ artist.name|safe }}', '{{ artist.id }}')">
+            <button class="play-btn" onclick="playTrack('{{ track.id }}', '{{ album.cover|safe }}', '{{ track.title|safe }}', '{{ get_artist_by_id(album.artist_id).name|safe }}', '{{ get_artist_by_id(album.artist_id).id }}')">
               ►
             </button>
           </td>
@@ -68,4 +68,3 @@
   {% endif %}
 </div>
 {% endblock %}
-

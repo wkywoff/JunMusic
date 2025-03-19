@@ -4,78 +4,123 @@
   <meta charset="UTF-8" />
   <title>JunMusic</title>
   <link rel="stylesheet" href="/static/css/style.css" />
+  <!-- Font Awesome для иконок -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
-  <div class="app-container">
-    <!-- ЛЕВАЯ БОКОВАЯ ПАНЕЛЬ -->
-    <nav class="sidebar">
-      <div class="sidebar-logo">
-        <span class="logo-text">Jun<span class="highlight">Music</span></span>
+  <!-- Desktop: Боковая панель -->
+  <nav class="sidebar">
+    <div class="sidebar-logo">
+      <span class="logo-text">Jun<span class="highlight">Music</span></span>
+    </div>
+    <ul class="sidebar-menu">
+      <li class="menu-item"><a href="/home">Home</a></li>
+      <li class="menu-item"><a href="/search">Search</a></li>
+      <li class="menu-item"><a href="/library">Your Library</a></li>
+    </ul>
+  </nav>
+
+  <!-- Mobile: Мини-плеер (верхняя панель) -->
+  <div class="mini-player" id="miniPlayer">
+    <div class="mini-player-cover">
+      <img src="/static/img/placeholder.png" alt="Cover" id="miniCover" />
+    </div>
+    <div class="mini-player-info">
+      <div class="mini-player-track" id="miniTrackTitle"></div>
+      <div class="mini-player-artist" id="miniTrackArtist"></div>
+    </div>
+    <div class="mini-player-controls">
+      <button id="miniPausePlayBtn">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Основной контент -->
+  <div class="main-view">
+    {% block content %}
+    {% endblock %}
+  </div>
+
+  <!-- Desktop: Плеер (фиксированный внизу) -->
+  <div class="player-bar">
+    <div class="player-left">
+      <img src="/static/img/placeholder.png" alt="Cover" class="cover-thumbnail" id="desktop-cover" style="visibility:hidden;">
+      <div class="track-info">
+        <div class="track-title" id="desktop-track-title"></div>
+        <div class="track-artist" id="desktop-track-artist"></div>
       </div>
-      <ul class="sidebar-menu">
-        <li class="menu-item">
-          <a href="/home">Home</a>
-        </li>
-        <li class="menu-item">
-          <a href="/search">Search</a>
-        </li>
-        <li class="menu-item">
-          <a href="/library">Your Library</a>
-        </li>
-      </ul>
-    </nav>
-
-    <!-- ЦЕНТРАЛЬНАЯ ОБЛАСТЬ -->
-    <div class="main-view">
-      {% block content %}
-      {% endblock %}
+    </div>
+    <div class="player-center">
+      <button id="prevBtn" class="control-btn">
+        <i class="fa-solid fa-backward-step"></i>
+      </button>
+      <button id="playPauseBtn" class="control-btn">
+        <i class="fa-solid fa-play"></i>
+      </button>
+      <button id="nextBtn" class="control-btn">
+        <i class="fa-solid fa-forward-step"></i>
+      </button>
+      <div class="progress-container">
+        <div id="desktop-progress" class="progress-bar"></div>
+      </div>
+      <div class="time-info">
+        <span id="desktop-currentTime">0:00</span> / <span id="desktop-duration">0:00</span>
+      </div>
+    </div>
+    <div class="player-right">
+      <div class="volume-container">
+        <i class="fa-solid fa-volume-high volume-icon"></i>
+        <input type="range" id="volumeSliderDesktop" min="0" max="1" step="0.01" value="0.3">
+      </div>
     </div>
   </div>
 
-<!-- НИЖНЯЯ ПАНЕЛЬ ПЛЕЕРА -->
-<div class="player-bar">
-  <div class="player-left">
-    <!-- Убираем "Выберите трек" по умолчанию -->
-    <img src="/static/img/placeholder.png" alt="Cover" class="cover-thumbnail" id="player-cover" style="visibility:hidden;">
-    <div class="track-info">
-      <!-- Пустые поля - заполняются при выборе трека -->
-      <div class="track-title" id="player-track-title"></div>
-      <div class="track-artist" id="player-track-artist"></div>
-    </div>
-  </div>
-  <div class="player-center">
-    <!-- Используем иконки Font Awesome -->
-    <button id="prevBtn" class="control-btn">
-      <i class="fa-solid fa-backward-step"></i>
+  <!-- Mobile: Нижняя панель навигации -->
+  <div class="bottom-nav">
+    <button class="nav-btn" onclick="location.href='/home'">
+      <i class="fa-solid fa-house"></i>
+      <span>Home</span>
     </button>
-    <button id="playPauseBtn" class="control-btn">
-      <i class="fa-solid fa-play"></i>
+    <button class="nav-btn" onclick="location.href='/search'">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <span>Search</span>
     </button>
-    <button id="nextBtn" class="control-btn">
-      <i class="fa-solid fa-forward-step"></i>
+    <button class="nav-btn" onclick="location.href='/library'">
+      <i class="fa-solid fa-book"></i>
+      <span>Your Library</span>
     </button>
-    <div class="progress-container">
-      <div id="progressBar" class="progress-bar"></div>
-    </div>
-    <div class="time-info">
-      <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
-    </div>
   </div>
-  <div class="player-right">
-    <!-- Блок громкости -->
-    <div class="volume-container">
-      <i class="fa-solid fa-volume-high volume-icon"></i>
-      <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
-    </div>
-  </div>
-</div>
 
-  <!-- Скрытый аудио элемент -->
+  <!-- Mobile: Полноэкранный плеер -->
+  <div class="fullscreen-player" id="fullscreenPlayer">
+    <div class="player-top">
+      <img src="/static/img/placeholder.png" alt="Cover" id="fullCover" />
+    </div>
+    <div class="player-middle">
+      <h2 id="fullTrackTitle">No track</h2>
+      <p id="fullTrackArtist">---</p>
+    </div>
+    <div class="player-bottom">
+      <div class="progress-container">
+        <div id="full-progress" class="progress-bar"></div>
+      </div>
+      <div class="time-info">
+        <span id="full-currentTime">0:00</span> / <span id="full-duration">0:00</span>
+      </div>
+      <div class="controls">
+        <button id="full-prevBtn"><i class="fa-solid fa-backward-step"></i></button>
+        <button id="full-playPauseBtn"><i class="fa-solid fa-play"></i></button>
+        <button id="full-nextBtn"><i class="fa-solid fa-forward-step"></i></button>
+      </div>
+      <button id="closeFullscreen"><i class="fa-solid fa-down-left-and-up-right-to-center"></i></button>
+    </div>
+  </div>
+
+  <!-- Единый аудиоэлемент -->
   <audio id="audioPlayer"></audio>
 
   <!-- JS -->
   <script src="/static/js/player.js"></script>
 </body>
 </html>
-

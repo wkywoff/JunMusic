@@ -1,0 +1,242 @@
+[
+    {
+        "id": "OXPV5ENWdbz2zzErrLUWTH",
+        "title": "x_ffff99",
+        "artist_id": "qQCf81teSfXtNdUHAlliSw",         # Ссылка на ARTISTS[0]
+        "type": "Single",       # Single, EP, Album
+        "release_date": "2025-03-13",
+        "cover": "cover1.jpg",  # /static/img/cover1.jpg
+        "copyright": "© 2025 alicefrfr",
+        "phonographic_copyright": "℗ 2025 alicefrfr",
+        "tracks": [
+            {
+                "id": "PrKqlF5nxb4plhpZgiCo9E",  # ID трека
+                "title": "x_ffff99",
+                "file_name": "track1.mp3",  # /static/audio/track1.mp3
+                "plays": "<1000"  # Условное число прослушиваний
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "title": "THE GOD",
+        "artist_id": 0,
+        "type": "EP",
+        "release_date": "0000-01-01",
+        "cover": "cover2.jpg",
+        "copyright": "© 0000 ANDRIY",
+        "phonographic_copyright": "℗ 0000 ANDRIY",
+        "tracks": [
+            {
+                "id": 1,
+                "title": "ANDRIY",
+                "file_name": "track2.mp3",
+                "plays": "<1000"
+            },
+            {
+                "id": 2,
+                "title": "THE GOD",
+                "file_name": "track2.mp3",
+                "plays": "<1000"
+            }
+        ]
+    },
+    {
+        "id": "dwSjU60M33KA6YbvIb2Tzi",
+        "title": "Зацепила",
+        "artist_id": "tRDMNJMgOs4xHNLMq0pMJI",
+        "type": "Single",
+        "release_date": "2019-03-07",
+        "cover": "cover3.png",
+        "copyright": "© 2019 Warner Music Russia",
+        "phonographic_copyright": "℗ 2019 Warner Music Russia",
+        "tracks": [
+            {
+                "id": "BLURvxprovNrNTeNdh4C25",
+                "title": "Зацепила",
+                "file_name": "track3.ogg",
+                "plays": "33,109,342"
+            }
+        ]
+    },
+    {
+        "id": "jqRko59ujCu7lsuD8NXUqR",
+        "title": "Чика",
+        "artist_id": "tRDMNJMgOs4xHNLMq0pMJI",
+        "type": "Single",
+        "release_date": "2018-05-11",
+        "cover": "cover4.png",
+        "copyright": "© 2018 Warner Music Russia",
+        "phonographic_copyright": "℗ 2018 Warner Music Russia",
+        "tracks": [
+            {
+                "id": "pit8gduXrVenLmV0eQGEGt",
+                "title": "Чика",
+                "file_name": "track4.ogg",
+                "plays": "12,246,356"
+            }
+        ]
+    },
+    {
+        "id": "XdEapSOwnAzTp9Qs898N75",
+        "title": "#Алкоголичка",
+        "artist_id": "tRDMNJMgOs4xHNLMq0pMJI",
+        "type": "Single",
+        "release_date": "2019-07-05",
+        "cover": "cover5.png",
+        "copyright": "© 2019 Warner Music Russia",
+        "phonographic_copyright": "℗ 2019 Warner Music Russia",
+        "tracks": [
+            {
+                "id": "rMvHQxg9aafY4NblF7TbWG",
+                "title": "#Алкоголичка",
+                "file_name": "track5.ogg",
+                "plays": "12,044,341"
+            }
+        ]
+    },
+    {
+        "id": "mVlOcYztvejwJabqeRtGRC",
+        "title": "Она решила сдаться",
+        "artist_id": "tRDMNJMgOs4xHNLMq0pMJI",
+        "type": "Single",
+        "release_date": "2020-02-14",
+        "cover": "cover6.png",
+        "copyright": "© 2020 Warner Music Russia",
+        "phonographic_copyright": "℗ 2020 Warner Music Russia",
+        "tracks": [
+            {
+                "id": "95rmO1qMxOKvu6cAg7rFtF",
+                "title": "Она решила сдаться",
+                "file_name": "track6.ogg",
+                "plays": "3,729,229"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Гімн Рёспублікі Джун-Джун",
+        "artist_id": 0,
+        "type": "Single",
+        "release_date": "2024-11-24",
+        "cover": "cover7.png",
+        "copyright": "© 2024 Andre",
+        "phonographic_copyright": "℗ 2024 Andre",
+        "tracks": [
+            {
+                "id": 3,
+                "title": "Гімн Рёспублікі Джун-Джун",
+                "file_name": "track7.ogg",
+                "plays": "<1000"
+            }
+        ]
+    },
+    {
+        "id": "msmyH7wKjhY7yiSLugth5Y",
+        "title": "SUCK IT!",
+        "artist_id": "xzljOV9t0CR4KPG65egXRI",
+        "type": "Album",
+        "release_date": "2025-03-14",
+        "cover": "cover8.png",
+        "copyright": "© 2025 dmtboy",
+        "phonographic_copyright": "℗ 2025 dmtboy",
+        "tracks": [
+            {
+                "id": "pjO2UUfVubw05qDq3q2dTM",
+                "title": "VIP",
+                "file_name": "8.ogg",
+                "plays": "5,602"
+            },
+            {
+                "id": "9CIeTRvruZgbcHkccCJ280",
+                "title": "FUCK YEAH",
+                "file_name": "9.ogg",
+                "plays": "3,995"
+            },
+            {
+                "id": "kREZdsv96iY0dPG28RQdCb",
+                "title": "ЗАНЯЛ НИШУ",
+                "file_name": "10.ogg",
+                "plays": "3,791"
+            },
+            {
+                "id": "rembUmuyYNHGdumZwC9Bkt",
+                "title": "OMGDBL",
+                "file_name": "11.ogg",
+                "plays": "4,732"
+            },
+            {
+                "id": "URp4V35UTvm4bOTJYCIBW7",
+                "title": "XXXXL",
+                "file_name": "12.ogg",
+                "plays": "3,438"
+            },
+            {
+                "id": "gxbklBaRLG6r0jwJLojP3Q",
+                "title": "TWERK",
+                "file_name": "13.ogg",
+                "plays": "4,277"
+            },
+            {
+                "id": "VZ1rlyYeOSYjaA5RYuex6H",
+                "title": "SKIT IT",
+                "file_name": "14.ogg",
+                "plays": "2,989"
+            },
+            {
+                "id": "M78OLOKupL7DymYWl231vi",
+                "title": "ONLINE (w/ diklor, SHTRIHCOD & dekma)",
+                "file_name": "15.ogg",
+                "plays": "7,300"
+            },
+            {
+                "id": "HteD107qJibiwVwC3rh3Ta",
+                "title": "БОЛЬШЕ ГЛАМУРА",
+                "file_name": "16.ogg",
+                "plays": "3,665"
+            },
+            {
+                "id": "GBox2jHR5DCoKMLeu61u81",
+                "title": "ACORN",
+                "file_name": "17.ogg",
+                "plays": "3,881"
+            },
+            {
+                "id": "kwNmv8X7k1opQSULzAZIVD",
+                "title": "DG",
+                "file_name": "18.ogg",
+                "plays": "3,101"
+            },
+            {
+                "id": "YWMK0E2O4Cz2RET1lBat3k",
+                "title": "MILF KLAB",
+                "file_name": "19.ogg",
+                "plays": "2,975"
+            },
+            {
+                "id": "ALOCiObZl82dGTdbWDsU46",
+                "title": "SUCK MY SWAG",
+                "file_name": "20.ogg",
+                "plays": "2,615"
+            },
+            {
+                "id": "3KVzJHJxn73V6w2lMBNEmD",
+                "title": "XXXXXXXXL (BONUS)",
+                "file_name": "21.ogg",
+                "plays": "2,730"
+            },
+            {
+                "id": "6RFGUGxgItCt1mOTm0TeFt",
+                "title": "4E TAKOE SWAG (BONUS)",
+                "file_name": "22.ogg",
+                "plays": "3,281"
+            },
+            {
+                "id": "InQ6F15oEzE6dzBW84B7QV",
+                "title": "2007 (BONUS)",
+                "file_name": "23.ogg",
+                "plays": "2,790"
+            }
+        ]
+    }
+]

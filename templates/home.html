@@ -10,14 +10,14 @@
       </a>
       <div class="album-info">
         <a href="/album/{{ album.id }}" class="album-title">{{ album.title }}</a>
-<div class="album-artist">
-  {% set artist = get_artist_by_id(album.artist_id) %}
-  {% if artist %}
-    <a href="/artist/{{ artist.id }}" class="artist-link">{{ artist.name }}</a>
-  {% else %}
-    Unknown Artist
-  {% endif %}
-</div>
+        <div class="album-artist">
+          {% set artist = get_artist_by_id(album.artist_id) %}
+          {% if artist %}
+            <a href="/artist/{{ artist.id }}" class="artist-link">{{ artist.name }}</a>
+          {% else %}
+            Unknown Artist
+          {% endif %}
+        </div>
         <div class="album-type">{{ album.type }}</div>
       </div>
     </div>
@@ -25,4 +25,3 @@
   </div>
 </div>
 {% endblock %}
-

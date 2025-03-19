@@ -14,7 +14,7 @@ body {
 }
 
 /* ======================
-   ОСНОВНАЯ СЕТКА
+   ОСНОВНАЯ СЕТКА (Desktop)
    ====================== */
 .app-container {
   display: flex;
@@ -24,7 +24,7 @@ body {
 }
 
 /* ======================
-   ЛЕВАЯ БОКОВАЯ ПАНЕЛЬ
+   ЛЕВАЯ БОКОВАЯ ПАНЕЛЬ (Desktop)
    ====================== */
 .sidebar {
   width: 220px;
@@ -42,7 +42,7 @@ body {
 }
 
 .logo-text .highlight {
-  color: #ffff99; /* Spotify Green */
+  color: #ffff99; /* Цвет, который вы используете */
 }
 
 .sidebar-menu {
@@ -65,7 +65,7 @@ body {
 }
 
 /* ======================
-   ЦЕНТРАЛЬНАЯ ЧАСТЬ
+   ЦЕНТРАЛЬНАЯ ЧАСТЬ (Desktop)
    ====================== */
 .main-view {
   flex: 1;
@@ -82,7 +82,7 @@ body {
 }
 
 /* ======================
-   НИЖНЯЯ ПАНЕЛЬ ПЛЕЕРА
+   НИЖНЯЯ ПАНЕЛЬ ПЛЕЕРА (Desktop)
    ====================== */
 .player-bar {
   position: fixed;
@@ -150,7 +150,7 @@ body {
 
 .control-btn:hover {
   background-color: #ffff99;
-  color: #fff;
+  color: #000;
 }
 
 .progress-container {
@@ -182,7 +182,7 @@ body {
   align-items: center;
 }
 
-/* Громкость */
+/* Громкость (Desktop) */
 .volume-container {
   display: flex;
   align-items: center;
@@ -467,4 +467,206 @@ body {
 ::-webkit-scrollbar-thumb {
   background-color: #555;
   border-radius: 4px;
+}
+
+/* ======================
+   МОБИЛЬНЫЕ ЭЛЕМЕНТЫ
+   ====================== */
+
+/* Мини-плеер (сверху, Mobile) */
+.mini-player {
+  display: none; /* на десктопе скрыто */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #282828;
+  align-items: center;
+  padding: 0 10px;
+  z-index: 999;
+}
+
+.mini-player-cover img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.mini-player-info {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.mini-player-track {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.mini-player-artist {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+.mini-player-controls button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Нижняя панель навигации (Mobile) */
+.bottom-nav {
+  display: none; /* на десктопе скрыто */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #000;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 999;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: #b3b3b3;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav-btn i {
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+.nav-btn:hover {
+  color: #fff;
+}
+
+/* Полноэкранный плеер (Mobile) */
+.fullscreen-player {
+  display: none; /* скрыт по умолчанию */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #181818;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+  padding-top: 40px;
+}
+
+.fullscreen-player.active {
+  display: flex;
+}
+
+.player-top img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.player-middle {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.player-middle h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.player-middle p {
+  font-size: 14px;
+  color: #b3b3b3;
+}
+
+.player-bottom {
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player-bottom .progress-container {
+  width: 90%;
+  margin-bottom: 10px;
+  background-color: #404040;
+}
+
+.player-bottom .progress-bar {
+  background-color: #ffff99;
+}
+
+.player-bottom .time-info {
+  font-size: 12px;
+  color: #b3b3b3;
+  margin-bottom: 10px;
+}
+
+.player-bottom .controls {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.player-bottom .controls button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.player-bottom .controls button:hover {
+  color: #ffff99;
+}
+
+#closeFullscreen {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+}
+
+#closeFullscreen:hover {
+  color: #ffff99;
+}
+
+/* ======================
+   АДАПТАЦИЯ ДЛЯ МОБИЛЬНЫХ
+   ====================== */
+@media (max-width: 768px) {
+  /* Скрываем десктопные элементы */
+  .sidebar {
+    display: none;
+  }
+  .player-bar {
+    display: none;
+  }
+
+  /* Показываем мобильные элементы */
+  .mini-player {
+    display: flex;
+  }
+  .bottom-nav {
+    display: flex;
+  }
 }

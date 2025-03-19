@@ -1,0 +1,213 @@
+/* Сброс */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Мини-плеер (top bar) */
+.mini-player {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #282828;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  z-index: 999;
+}
+
+.mini-player-cover img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.mini-player-info {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.mini-player-track {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.mini-player-artist {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+.mini-player-controls {
+  margin-left: 10px;
+}
+
+.mini-player-controls button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.mini-player-controls button:hover {
+  color: #1db954;
+}
+
+/* Основной контент под мини-плеером */
+.content {
+  margin-top: 60px; /* чтобы не залезать под мини-плеер */
+  padding: 20px;
+}
+
+/* Нижняя панель навигации */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: #b3b3b3;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav-btn i {
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+.nav-btn:hover {
+  color: #fff;
+}
+
+/* Полноэкранный плеер (скрыт по умолчанию) */
+.fullscreen-player {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #181818;
+  display: none; /* показываем через JS */
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 1000;
+  padding-top: 40px;
+}
+
+.fullscreen-player.active {
+  display: flex;
+}
+
+.player-top img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.player-middle {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.player-middle h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.player-middle p {
+  font-size: 14px;
+  color: #b3b3b3;
+}
+
+.player-bottom {
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progress-container {
+  background-color: #404040;
+  width: 90%;
+  height: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.progress-bar {
+  background-color: #1db954;
+  height: 100%;
+  width: 0%;
+  border-radius: 3px;
+}
+
+.time-info {
+  font-size: 12px;
+  color: #b3b3b3;
+  margin-bottom: 10px;
+}
+
+.controls {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.controls button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  color: #1db954;
+}
+
+#closeFullscreen {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+}
+
+/* Кнопка закрыть (иконка) */
+#closeFullscreen:hover {
+  color: #1db954;
+}

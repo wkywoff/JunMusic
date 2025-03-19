@@ -6,7 +6,7 @@
         "image": "artist1.png",
         "bio": "стип чо",
         "popular_tracks": ["PrKqlF5nxb4plhpZgiCo9E"],
-        "liked_songs": [],
+        "liked_songs": []
     },
     {
         "id": "q6ocAToad8ifLk46EaDnU9",
@@ -15,7 +15,7 @@
         "image": "cover2.jpg",
         "bio": "THE GOD",
         "popular_tracks": [3, 1, 2],
-        "liked_songs": [],
+        "liked_songs": []
     },
     {
         "id": "tRDMNJMgOs4xHNLMq0pMJI",
@@ -24,7 +24,7 @@
         "image": "artist3.png",
         "bio": "",
         "popular_tracks": ["BLURvxprovNrNTeNdh4C25", "pit8gduXrVenLmV0eQGEGt", "rMvHQxg9aafY4NblF7TbWG", "95rmO1qMxOKvu6cAg7rFtF"],
-        "liked_songs": [],
+        "liked_songs": []
     },
     {
         "id": "xzljOV9t0CR4KPG65egXRI",
@@ -33,6 +33,6 @@
         "image": "artist4.png",
         "bio": "",
         "popular_tracks": ["M78OLOKupL7DymYWl231vi", "pjO2UUfVubw05qDq3q2dTM", "rembUmuyYNHGdumZwC9Bkt", "gxbklBaRLG6r0jwJLojP3Q", "9CIeTRvruZgbcHkccCJ280"],
-        "liked_songs": [],
+        "liked_songs": []
     }
 ]

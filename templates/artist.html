@@ -30,8 +30,7 @@
         <td>{{ track.title }}</td>
         <td>{{ track.duration_str }}</td>
         <td>
-          <button 
-            class="play-btn" 
+          <button class="play-btn" 
             onclick="playTrack('{{ track.id }}', '{{ album.cover|safe }}', '{{ track.title|safe }}', '{{ artist.name|safe }}', '{{ artist.id }}')">
             ►
           </button>
@@ -59,9 +58,8 @@
         <td>{{ track.title }}</td>
         <td>{{ track.duration_str }}</td>
         <td>
-          <button
-            class="play-btn"
-            onclick="playTrack('{{ track.id }}', '{{ album.cover|safe }}', '{{ track.title|safe }}', '{{ artist.name|safe }}')">
+          <button class="play-btn" 
+            onclick="playTrack('{{ track.id }}', '{{ album.cover|safe }}', '{{ track.title|safe }}', '{{ artist.name|safe }}', '{{ artist.id }}')">
             ►
           </button>
         </td>
@@ -87,4 +85,3 @@
   </div>
 </div>
 {% endblock %}
-
